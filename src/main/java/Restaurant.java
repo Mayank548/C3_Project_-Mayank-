@@ -64,13 +64,13 @@ public class Restaurant {
     public int getOrderValue(List<Item> orderList) {
         int orderValue = 0;
 
-       /* if (orderList.isEmpty()) {
+        if (orderList.isEmpty()) {
             throw new NoItemSelectedException("No Items Selected");
         }
 
         for (Item item : orderList) {
             orderValue += item.getPrice();
-        }*/
+        }
         return orderValue;
     }
 
