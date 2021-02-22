@@ -5,7 +5,11 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(MockitoExtension.class)
@@ -64,7 +68,7 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
 
-    /*@Test
+    @Test
     public void order_value_after_adding_items(){
         List<Item> list = restaurant.getMenu();
         List<Item> orderList = new ArrayList<>(list);
@@ -83,6 +87,6 @@ class RestaurantTest {
 
         assertThrows(NoItemSelectedException.class, ()->
                        restaurant.getOrderValue(orderList));
-    }*/
+    }
 
 }
